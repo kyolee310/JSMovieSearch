@@ -7,14 +7,15 @@ window.myConfig = window.myConfig || {};
 
 document.getElementById("error-div").innerHTML += OMDB_APIKEY;
 document.getElementById("error-div").innerHTML += NODEJS_URL;
-// Validate the environment variables such as OMDb API key and the URL of NodeJS server.
 var config = window.myConfig;
+// Retrieve Heroku environment variables
 if (!config.omdb_apikey) {
-    config.ombd_apikey = OMDB_APIKEY;
+    config.omdb_apikey = OMDB_APIKEY;
 }
 if (!config.nodejs_conn) {
     config.nodejs_conn = NODEJS_URL;
 }
+// Validate the environment variables such as OMDb API key and the URL of NodeJS server.
 if (!config.omdb_apikey) {
     document.getElementById("error-div").innerHTML += "Error: Missing 'omdb_apikey' in configuration file.<br>";
 }
