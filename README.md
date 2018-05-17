@@ -22,7 +22,7 @@ https://frozen-caverns-18184.herokuapp.com/
    cd JSMovieSearch
    ```
 
-2. Insert your own [**OMDb API key**](http://www.omdbapi.com/) in _./public/config.js_.
+2. Insert your own [OMDb API key](http://www.omdbapi.com/) in _./public/config.js_.
    ```javascript
    myConfig = {
      omdb_apikey: '123abc456de'
