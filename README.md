@@ -12,13 +12,13 @@ The application is written in **Vanilla JavaScript** and **NodeJS**. The applica
 
 #### Running the application manually on a Linux server
 
-1. Clone this repository on your server.
+1. Clone this repository on your server and change the directory to _JSMovieSearch_.
    ```
    git clone https://github.com/kyolee310/JSMovieSearch.git
    cd JSMovieSearch
    ```
 
-2. Insert your [**OMDb API key**](http://www.omdbapi.com/) in _./public/config.js_.
+2. Insert your own [**OMDb API key**](http://www.omdbapi.com/) in _./public/config.js_.
    ```javascript
    myConfig = {
      omdb_apikey: '123abc456de'
@@ -48,7 +48,7 @@ The application is written in **Vanilla JavaScript** and **NodeJS**. The applica
    heroku create
    ```
 
-4. Insert your own OMDB API key into Heroku's configuration.
+4. Insert your own [OMDB API key](http://www.omdbapi.com/) into Heroku's configuration.
    ```
    heroku config:set OMDB_APIKEY=123abc456de
    ```
