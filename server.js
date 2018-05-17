@@ -11,8 +11,10 @@ app.use(bodyParser.json());
 // Missed ) at the end of the function -- Kyo 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+// This function creates env.js that loads the necessary environment variables
+// for the client side JavaScript when running on Heroku.
 app.get('/env.js', function(req, res){
-    res.send("var OMDB_APIKEY='"+process.env.OMDB_APIKEY+"'");
+    res.send("var OMDB_APIKEY='"+process.env.OMDB_APIKEY+"'; var API_URL='"+process.env.API_URL+"';");
 });
 
 // Missed }) at the end of the function -- Kyo
