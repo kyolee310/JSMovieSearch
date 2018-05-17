@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 // Missed ) at the end of the function -- Kyo 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+app.get('/env.js', function(req, res){
+    res.send("var OMDB_APIKEY='"+process.env.OMDB_APIKEY+"'");
+});
+
 // Missed }) at the end of the function -- Kyo
 // This function handles the GET request on the endpoint /favorites,
 // which return the user's favorite movies list.

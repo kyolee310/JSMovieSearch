@@ -5,6 +5,7 @@
 // Import the environment variables loaded from config.js.
 window.myConfig = window.myConfig || {};
 
+document.getElementById("error-div").innerHTML += OMDB_APIKEY;
 // Validate the environment variables such as OMDb API key and the URL of NodeJS server.
 var config = window.myConfig;
 if (!config.omdb_apikey) {
