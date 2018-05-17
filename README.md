@@ -3,11 +3,10 @@ Movie Search Web Application written in Vanilla JavaScript and NodeJS
 
 ## Installation Guide
 
-1. Update _config.js_ to include your [**OMDb API key**](http://www.omdbapi.com/) and the **URL** of your NodeJS server.
+1. Update _config.js_ to include your [**OMDb API key**](http://www.omdbapi.com/).
    ```javascript
    myConfig = {
-     omdb_apikey: '123abc456de',
-     nodejs_conn: 'http://ec2-55-555-55-123.us-west-1.compute.amazonaws.com:3000'
+     omdb_apikey: '123abc456de'
    };
    ```
 
@@ -16,3 +15,16 @@ Movie Search Web Application written in Vanilla JavaScript and NodeJS
    node server.js
    ```
 
+### Running on Heroku
+
+
+   ```
+   heroku login
+   git clone https://github.com/kyolee310/JSMovieSearch.git
+   heroku create
+   heroku config:set OMDB_APIKEY=123abc456de
+   git push heroku master
+   heroku ps:scale web=1
+   heroku open
+   heroku logs --tail
+   ```
