@@ -1,16 +1,20 @@
 # JSMovieSearch
 
-Movie Search Web Application written in Vanilla JavaScript and NodeJS
+Movie Search Web Application written in Vanilla JavaScript and NodeJS.
 
 ## Overview
 
 This web application allows users to search movies using the movie title. When the user enters the title of a movie in the search text box, the application displays a list of the movies that have the matching title. When the user clicks the Show button on one of the movies on the list, the application reveals the detailed description of the selected movie; the description includes the poster of the movie and other useful information of the movie such as the year, rated, release date, runtime, genre, director, actors, plot, language, country, and imdb rating of the movie. Also the users can create a list of their favorite movies by clicking the Favorite button that appears next to each movie title. 
 
-The application is written in **Vanilla JavaScript** and **NodeJS**. The application uses the OMDB(http://www.omdbapi.com/) API to obtain movie data. Additionally, the application uses **Bootstrap**, an open-source front-end library for HTML and CSS, to manage the responsive rendering of the applications’ HTML elements. 
+The application is written in **Vanilla JavaScript** and **NodeJS**. The application uses the **OMDB(http://www.omdbapi.com/) API** to obtain movie data. Additionally, the application uses **Bootstrap**, an open-source front-end library for HTML and CSS, to manage the responsive rendering of the applications’ HTML elements. 
+
+You can find this application currently running at the following URL:
+
+https://frozen-caverns-18184.herokuapp.com/
 
 ## Installation Guide
 
-#### Running the application manually on a Linux server
+### Running the application manually on a Linux server
 
 1. Clone this repository on your server and change the directory to _JSMovieSearch_.
    ```
@@ -30,7 +34,7 @@ The application is written in **Vanilla JavaScript** and **NodeJS**. The applica
    node server.js
    ```
 
-#### Running the application on Heroku
+### Running the application on Heroku
 
 1. Log in to Heroku using Heroku CLI.
    ```
