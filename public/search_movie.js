@@ -6,6 +6,7 @@
 window.myConfig = window.myConfig || {};
 
 var config = window.myConfig;
+
 // Retrieve Heroku environment variables
 if (!config.omdb_apikey) {
     config.omdb_apikey = OMDB_APIKEY;
