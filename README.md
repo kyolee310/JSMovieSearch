@@ -62,7 +62,7 @@ https://frozen-caverns-18184.herokuapp.com/
    git push heroku master
    ```
 
-6. Monitor the application's status using the commands below.
+The application is deployed on Heroku at this point. You can monitor the application's status using the commands below:
    ```
    heroku ps:scale web=1
    heroku open
