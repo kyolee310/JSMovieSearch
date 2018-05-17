@@ -14,6 +14,15 @@ https://frozen-caverns-18184.herokuapp.com/
 
 ## Installation Guide
 
+### Before you start
+
+Make sure that you have **Node** and **Git** installed on your server or machine. You can run the commands below on your command shell to verify the installations:
+
+   ```
+   node --version
+   git --version
+   ```
+
 ### Running the application manually on a Linux server
 
 1. Clone this repository on your server and change the directory to _JSMovieSearch_.
@@ -22,7 +31,7 @@ https://frozen-caverns-18184.herokuapp.com/
    cd JSMovieSearch
    ```
 
-2. Insert your own [OMDb API key](http://www.omdbapi.com/) in _./public/config.js_.
+2. Insert _your own [OMDb API key](http://www.omdbapi.com/)_ in the configuration file _./public/config.js_.
    ```javascript
    myConfig = {
      omdb_apikey: '123abc456de'
@@ -52,7 +61,7 @@ https://frozen-caverns-18184.herokuapp.com/
    heroku create
    ```
 
-4. Insert your own [OMDB API key](http://www.omdbapi.com/) into Heroku's configuration.
+4. Insert _your own [OMDB API key](http://www.omdbapi.com/)_ into Heroku's configuration.
    ```
    heroku config:set OMDB_APIKEY=123abc456de
    ```
