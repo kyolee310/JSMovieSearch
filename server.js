@@ -104,6 +104,6 @@ app.post('/favorites/remove', function(req, res) {
 });
 
 // Had the incorect function name app.list(), which needed to be app.listen() -- Kyo
-app.listen(3000, function() {
-    console.log("Listening on port 3000");
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Listening on port 3000 or " + process.env.PORT);
 });
