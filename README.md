@@ -61,7 +61,7 @@ Make sure that you have **Node** and **Git** installed on your server or machine
    cd JSMovieSearch
    ```
 
-2. Insert _your own [OMDb API key](http://www.omdbapi.com/)_ in the configuration file _./public/config.js_.
+2. Insert _your own [OMDb API key](http://www.omdbapi.com/)_ in the configuration file _/public/config.js_.
    ```javascript
    myConfig = {
      omdb_apikey: '123abc456de'
