@@ -3,6 +3,8 @@ Movie Search Web Application written in Vanilla JavaScript and NodeJS
 
 ## Installation Guide
 
+### Running the app manually
+
 1. Update _config.js_ to include your [**OMDb API key**](http://www.omdbapi.com/).
    ```javascript
    myConfig = {
