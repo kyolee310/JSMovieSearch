@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser'); // Missed the module 'body-parser' -- Kyo
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public'))); // Detected unneeded / in '/public' -- Kyo
 app.use(bodyParser.urlencoded({extended: false})); // Missed ; at the end of the line -- Kyo
 app.use(bodyParser.json());
 
