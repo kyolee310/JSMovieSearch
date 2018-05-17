@@ -108,7 +108,7 @@ var searchMovies = function() {
         return;
     }
     // Construct the request URL for the API call
-    var url = "http://www.omdbapi.com/?apikey=" + config.omdb_apikey + "&s=" + movieTitle;
+    var url = "https://www.omdbapi.com/?apikey=" + config.omdb_apikey + "&s=" + movieTitle;
     xhr.open("GET", url, true);
     // Assign a callback function that handles the response from this call.
     xhr.onreadystatechange = function() {
@@ -123,7 +123,7 @@ var searchMovies = function() {
 var getMovieDetailById = function(imdbID) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call
-    var url = "http://www.omdbapi.com/?apikey=" + config.omdb_apikey + "&i=" + imdbID;
+    var url = "https://www.omdbapi.com/?apikey=" + config.omdb_apikey + "&i=" + imdbID;
     xhr.open("GET", url, true);
     // Assign a callback function that handles the response from this call.
     xhr.onreadystatechange = function() {
@@ -139,7 +139,8 @@ var getMovieDetailById = function(imdbID) {
 var getFavorites = function(isDisplayed) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call, which will go to the NodeJS backend server.
-    var url = config.nodejs_conn + "/favorites";
+    //var url = config.nodejs_conn + "/favorites";
+    var url = "/favorites";
     xhr.open("GET", url, true);
     // Assign a callback function that handles the response from this call.
     // Notice that the parameter isDisplayed is directly relayed to the second parameter of the callback function.
