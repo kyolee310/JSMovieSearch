@@ -36,7 +36,7 @@ https://frozen-caverns-18184.herokuapp.com/
 
 ### Running the application on Heroku
 
-1. Log in to Heroku using Heroku CLI.
+1. Log in to Heroku using [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
    ```
    heroku login
    ```
