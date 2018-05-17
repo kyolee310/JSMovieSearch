@@ -283,8 +283,11 @@ var handleFavoritesResponse = function(xhr, toDisplay) {
 //==================================
 
 // This function adds a series of the div elements to the response-div element.
+// This function takes an array of the movie data as a parameter.
+// We can pass the global array movieData or the global array favoritesData to this function.
+// In either case, the function treats the input array in the same manner, thus establishing consistency in display.
 // Each of the div elements contains a movie title and two buttons: Show and Favorite.
-// Each of the div elements is identifiable by its movie's imdbID, which is used as part of the element's id.  
+// Each of the div elements is identifiable by its movie's imdbID, which is used as part of the element's id.
 var displayMovieList = function(movieList) {
     var str = "";
     // Loop through all the movies in the list, which is passed in as a parameter
