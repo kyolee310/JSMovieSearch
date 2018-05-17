@@ -104,6 +104,8 @@ app.post('/favorites/remove', function(req, res) {
 });
 
 // Had the incorect function name app.list(), which needed to be app.listen() -- Kyo
-app.listen(process.env.PORT || 3000, function() {
-    console.log("Listening on port 3000 or " + process.env.PORT);
+// process.env.PORT is added to work on Heroku
+var server = app.listen(process.env.PORT || 3000, function() {
+    var port = server.address().port;
+    console.log("Listening on port " + port);
 });
