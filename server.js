@@ -109,7 +109,7 @@ app.post('/favorites/remove', function(req, res) {
     res.send(data);
 });
 
-// Had the incorect function name app.list(), which needed to be app.listen() -- Kyo
+// Had the incorrect function name app.list(), which needed to be app.listen() -- Kyo
 // process.env.PORT is added to work on Heroku
 var server = app.listen(process.env.PORT || 3000, function() {
     var port = server.address().port;
