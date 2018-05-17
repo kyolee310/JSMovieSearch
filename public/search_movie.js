@@ -3,13 +3,14 @@
 //========================
 
 // Import the environment variables loaded from config.js.
+// The environement variables from the file config.js won't be used when the application runs on Heroku.
 var config = window.myConfig || {};
 
 // Retrieve Heroku environment variables
 if (!config.omdb_apikey) {
     config.omdb_apikey = OMDB_APIKEY;
 }
-// Validate the environment variables such as OMDb API key and the URL of NodeJS server.
+// Validate the environment variables such as OMDb API key.
 if (!config.omdb_apikey) {
     document.getElementById("error-div").innerHTML += "Error: Missing 'omdb_apikey' in configuration file.<br>";
 }
@@ -129,7 +130,7 @@ var getMovieDetailById = function(imdbID) {
 // the list of the movies displayed on the screen needs to be refreshed with the newly received data.
 var getFavorites = function(isDisplayed) {
     var xhr = new XMLHttpRequest();
-    // Construct the URL for the API call, which will go to the NodeJS backend server.
+    // Construct the URL for the API call, which points to the Node backend server.
     var url = "/favorites";
     xhr.open("GET", url, true);
     // Assign a callback function that handles the response from this call.
@@ -147,7 +148,7 @@ var getFavorites = function(isDisplayed) {
 // and it included the movie's detail in the body of the POST request. 
 var informNewFavorite = function(imdbID) {
     var xhr = new XMLHttpRequest();
-    // Construct the URL for the API call, which points to the NodeJS backend server.
+    // Construct the URL for the API call, which points to the Node backend server.
     var url = "/favorites";
     // Retieve the detail of the movie using its imdbID
     var thisMovie = getMovieDataById(imdbID);
@@ -177,7 +178,8 @@ var informNewFavorite = function(imdbID) {
 // This function takes the imdbID of a movie as a parameter to inform the backend server which movie to be removed. 
 var informRemoveFavorite = function(imdbID) {
     var xhr = new XMLHttpRequest();
-    // Construct the URL for the API call. Notice the additional path needed for the removal operation.
+    // Construct the URL for the API call, which points to the Node backend server.
+    // Notice the additional path /remove is needed for the removal operation.
     var url = "/favorites/remove";
     // Set up a POST request
     xhr.open("POST", url, true);
