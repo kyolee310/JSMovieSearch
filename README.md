@@ -11,7 +11,7 @@ Movie Search Web Application written in Vanilla JavaScript and NodeJS
    };
    ```
 
-2. Run the NodeJS server in the _backend_ directory.
+2. Run the NodeJS server.
    ```
    node server.js
    ```
