@@ -1,0 +1,40 @@
+.movie-search-main{
+  padding: 30px
+}
+
+.movie-detail{
+  border: 1px double white;
+  background-color: ghostwhite;
+}
+
+.movie-poster{
+  text-align: center;
+  padding: 10px;
+}
+
+.movie-description{
+  padding-top: 10px;
+  padding-right: 20px;
+  font-size: 18;
+}
+
+.movie-title-div{
+  background-color: #0b4ff121;
+}
+
+.movie-title-span{
+  padding: 10px;
+  font-weight: bold;
+}
+
+.buttons-div{
+  padding: 3px;
+}
+
+.show-button-span{
+  padding: 5px;
+}
+
+.favorite-button-span{
+  padding: 5px;
+}
