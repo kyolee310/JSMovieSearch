@@ -16,27 +16,27 @@ https://frozen-caverns-18184.herokuapp.com/
 
 #### server.js
 
-This JavaScript file contains the code for the Node backend. The main task of the backend in this application is to persist the data that contain the user’s favorite movies list. When a GET request is made to the endpoint _/favorites_, the backend returns the user’s favorite movies list. (At the moment, only one user is simulated in the application.) However, when a POST request is made to the same endpoint _/favorites_, the endpoint expects update in the user’s favorite movies list: an addition of a new movie in the list. If the application wants to remove a movie from the user’s favorite movies list, a POST request needs to be made to the endpoint _/favorites/remove_.
+This JavaScript file contains the code for the Node backend server. The main task of the backend server in this application is to persist the data that contain the user’s favorite movies list. When a GET request is made to the endpoint _/favorites_, the backend returns the user’s favorite movies list. (At the moment, only one user is simulated in the application.) However, when a POST request is made to the same endpoint _/favorites_, the endpoint expects update in the user’s favorite movies list: an addition of a new movie in the list. If the application wants to remove a movie from the user’s favorite movies list, a POST request needs to be made to the endpoint _/favorites/remove_. All POST requests to the backend server must contain the _name_ and _oid_ of the user in the body of the request.
 
 #### data.json
 
-This file stores the JSON object that contains the user’s favorite movies list.
+This file stores the JSON object that represents the user’s favorite movies list.
 
 #### /public/index.html
 
-This HTML file is first loaded to the client’s web browser when the website, which runs this application, is visited. This HTML file contains a bare-minimum frame of the HTML elements for the application. More importantly, this file initiates the loading of other various scripts such as Bootstrap, CSS, and our main client-side JavaScript _search_movie.js_.
+This HTML file is first loaded to the client’s web browser when the website, which runs this application, is visited. This HTML file contains the bare-minimum frame of the HTML elements for the application. More importantly, this HTML file initiates the loading of the other scripts such as Bootstrap, CSS, and our main client-side JavaScript file _search_movie.js_.
 
 #### /public/search_movie.js
 
 This JavaScript file runs on the client’s web browser to manage various interactions on the HTML elements and handle data flow between the client’s web browser and the API servers (the OMDB API server and our Node backend server).
 
-The application uses the OMDb API to obtain movie information. The AJAX component in this JavaScript file makes direct API calls to the OMDb server to receive the movie data. Two types of the API calls are made to the OMDb server: search by title and search by imdb ID. The former requests a list of the movies that contain the movie title, which is provided as a parameter to the API call. The later requests a detailed description of the movie given its imdb ID, which is a parameter to the API call.
+The application uses the OMDb API to obtain movie information. The AJAX component in this JavaScript file makes direct API calls to the OMDb server to receive the movie data. Two types of the API calls are made to the OMDb server: _search by title_ and _search by imdb ID_. The former requests a list of the movies that contain the movie title, which is provided as a parameter to the API call. The later requests a detailed description of the movie given its imdb ID, which is a parameter to the API call.
 
-Another AJAX component in this JavaScript file interacts with the Node backend server to store the user’s favorite movies list. There are two endpoints available in the Node backend server: _/favorites_ and _/favorites/remove_. See the description of _server.js_ for more detail.
+The other AJAX component in this file interacts with the Node backend server to store the user’s favorite movies list. There are two endpoints (and three actions) available in the Node backend server: _/favorites_ and _/favorites/remove_. See the description of _server.js_ above for more detail.
 
 #### /public/config.js
 
-This configuration file is used to specify the OMDb API key. This file is not used when the application runs on Heroku.
+This configuration file is used to specify the OMDb API key. However, this file is not used when the application runs on Heroku.
 
 #### /public/custom.css
 
