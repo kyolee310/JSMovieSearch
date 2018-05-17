@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser'); // Missed the module 'body-parser' -- Kyo
 
-app.use(express.static(path.join(__dirname, 'public'))); // Detected unneeded / in '/public' -- Kyo
+app.use(express.static(path.join(__dirname, '/public'))); 
 app.use(bodyParser.urlencoded({extended: false})); // Missed ; at the end of the line -- Kyo
 app.use(bodyParser.json());
 
@@ -14,7 +14,7 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 // This function creates env.js that loads the necessary environment variables
 // for the client side JavaScript when running on Heroku.
 app.get('/env.js', function(req, res){
-    res.send("var OMDB_APIKEY='"+process.env.OMDB_APIKEY+"'; var PUBLIC_URL='"+process.env.PUBLIC_URL+"';");
+    res.send("var OMDB_APIKEY='"+process.env.OMDB_APIKEY+"'; var NODEJS_URL_URL='"+process.env.URL+"';");
 });
 
 // Missed }) at the end of the function -- Kyo
