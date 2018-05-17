@@ -5,8 +5,6 @@
 // Import the environment variables loaded from config.js.
 window.myConfig = window.myConfig || {};
 
-document.getElementById("error-div").innerHTML += OMDB_APIKEY;
-document.getElementById("error-div").innerHTML += NODEJS_URL;
 var config = window.myConfig;
 // Retrieve Heroku environment variables
 if (!config.omdb_apikey) {
@@ -158,7 +156,8 @@ var getFavorites = function(isDisplayed) {
 var informNewFavorite = function(imdbID) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call, which points to the NodeJS backend server.
-    var url = config.nodejs_conn + "/favorites";
+    //var url = config.nodejs_conn + "/favorites";
+    var url = "/favorites";
     // Retieve the detail of the movie using its imdbID
     var thisMovie = getMovieDataById(imdbID);
     // Validate the movie detail data. In case of error, cancel the request.
@@ -188,7 +187,8 @@ var informNewFavorite = function(imdbID) {
 var informRemoveFavorite = function(imdbID) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call. Notice the additional path needed for the removal operation.
-    var url = config.nodejs_conn + "/favorites/remove";
+    //var url = config.nodejs_conn + "/favorites/remove";
+    var url = "/favorites/remove";
     // Set up a POST request
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
