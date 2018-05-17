@@ -3,23 +3,15 @@
 //========================
 
 // Import the environment variables loaded from config.js.
-window.myConfig = window.myConfig || {};
-
-var config = window.myConfig;
+var config = window.myConfig || {};
 
 // Retrieve Heroku environment variables
 if (!config.omdb_apikey) {
     config.omdb_apikey = OMDB_APIKEY;
 }
-if (!config.nodejs_conn) {
-    config.nodejs_conn = NODEJS_URL;
-}
 // Validate the environment variables such as OMDb API key and the URL of NodeJS server.
 if (!config.omdb_apikey) {
     document.getElementById("error-div").innerHTML += "Error: Missing 'omdb_apikey' in configuration file.<br>";
-}
-if (!config.nodejs_conn) {
-    document.getElementById("error-div").innerHTML += "Error: Missing 'nodejs_conn' in configuration file.<br>";
 }
 
 //===================
@@ -138,7 +130,6 @@ var getMovieDetailById = function(imdbID) {
 var getFavorites = function(isDisplayed) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call, which will go to the NodeJS backend server.
-    //var url = config.nodejs_conn + "/favorites";
     var url = "/favorites";
     xhr.open("GET", url, true);
     // Assign a callback function that handles the response from this call.
@@ -157,7 +148,6 @@ var getFavorites = function(isDisplayed) {
 var informNewFavorite = function(imdbID) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call, which points to the NodeJS backend server.
-    //var url = config.nodejs_conn + "/favorites";
     var url = "/favorites";
     // Retieve the detail of the movie using its imdbID
     var thisMovie = getMovieDataById(imdbID);
@@ -188,7 +178,6 @@ var informNewFavorite = function(imdbID) {
 var informRemoveFavorite = function(imdbID) {
     var xhr = new XMLHttpRequest();
     // Construct the URL for the API call. Notice the additional path needed for the removal operation.
-    //var url = config.nodejs_conn + "/favorites/remove";
     var url = "/favorites/remove";
     // Set up a POST request
     xhr.open("POST", url, true);
