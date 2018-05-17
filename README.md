@@ -2,7 +2,7 @@
 
 Movie Search Web Application written in Vanilla JavaScript and NodeJS.
 
-![Screen Shot](https://github.com/kyolee310/JSMovieSearch/blob/master/screenshot.png)
+<img src="https://github.com/kyolee310/JSMovieSearch/blob/master/screenshot.png" width="600">
 
 ## Overview
 
