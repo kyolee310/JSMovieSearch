@@ -70,7 +70,7 @@ Make sure that you have **Node** and **Git** installed on your server or machine
    };
    ```
 
-3. Run the NodeJS server.
+3. Run the Node server.
    ```
    node server.js
    ```
